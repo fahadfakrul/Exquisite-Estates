@@ -1,0 +1,19 @@
+.slide{
+    height: 554px;
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.slide-1{
+    background-image: url("../../src/assets/banner0.webp");
+}
+.slide-2{
+    background-image: url("../../src/assets/banner1.jpg");
+}
+.slide-3{
+    background-image: url("../../src/assets/banner2.jpg");
+}
+.slide-4{
+    background-image: url("../../src/assets/banner3.jpg");
+}
