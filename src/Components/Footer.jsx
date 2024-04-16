@@ -1,7 +1,7 @@
 import { FaBuilding,FaPhoneAlt,FaEnvelope,FaSkype } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="py-6 dark:bg-gray-100 dark:text-gray-900">
+    <footer className="py-6 mt-10 dark:bg-gray-100 dark:text-gray-900">
       <div className="container px-6 mx-auto space-y-6  dark:divide-gray-600 md:space-y-12 divide-opacity-50">
         <div className="grid grid-cols-12">
           <div className="pb-6 col-span-full md:pb-0 md:col-span-6">
@@ -10,7 +10,7 @@ const Footer = () => {
               href="#"
               className="flex justify-center space-x-3 md:justify-start"
             >
-              <span className="self-center text-2xl font-semibold">About</span>
+              <span className="pb-8 self-center text-2xl font-semibold font-playfair">About</span>
             </a>
             <p className="text-gray-500">
               Our Real Estate Inc company is committed to delivering a high
@@ -19,8 +19,8 @@ const Footer = () => {
               properties.
             </p>
           </div>
-          <div className="col-span-6 text-center md:text-left md:col-span-3">
-            <p className="pb-1 text-lg font-medium">Listings by Category</p>
+          <div className="col-span-12 text-center  md:text-left md:col-span-3">
+            <p className="pb-2  text-2xl font-semibold font-playfair">Listings by Category</p>
             <ul>
               <li>
                 <a
@@ -78,8 +78,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-span-6 text-center md:text-left md:col-span-3">
-            <p className="pb-1 text-lg font-medium">Contact</p>
+          <div className="col-span-12 mt-2 md:mt-o text-center md:text-left md:col-span-3">
+            <p className="pb-2  text-2xl font-semibold font-playfair">Contact</p>
             <ul>
               <li>
                 <a

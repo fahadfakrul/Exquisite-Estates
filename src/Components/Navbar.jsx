@@ -51,7 +51,8 @@ const Navbar = () => {
           </NavLink>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl lg:text-3xl font-semibold lg:font-bold text-black"><span className="text-[#d2c196] ">Exquisite</span> Estates</a>
+        <a className="btn btn-ghost text-base lg:text-3xl font-semibold lg:font-bold text-black"><span className="text-[#d2c196] ">Exquisite</span> Estates</a>
+        
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1  items-center gap-5">
