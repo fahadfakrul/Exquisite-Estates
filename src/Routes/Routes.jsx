@@ -3,6 +3,8 @@ import Root from "../Layouts/Root";
 import Home from "../Pages/Home";
 import ErrorPage from "../Pages/error-page";
 import EstateDetails from "../Components/EstateDetails";
+import Login from "../Components/Login";
+import Register from "../Components/Register";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
         path: '/estate/:id',
         element: <EstateDetails></EstateDetails>,
         loader: () => fetch("/luxury.json"),
+      },
+      {
+        path: '/login',
+        element: <Login></Login>,
+      },
+      {
+        path: '/register',
+        element: <Register></Register>,
       },
     ],
   },
