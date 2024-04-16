@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layouts/Root";
 import Home from "../Pages/Home";
 import ErrorPage from "../Pages/error-page";
+import EstateDetails from "../Components/EstateDetails";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/estate/:id',
-        element: <Home></Home>,
+        element: <EstateDetails></EstateDetails>,
         loader: () => fetch("/luxury.json"),
       },
     ],

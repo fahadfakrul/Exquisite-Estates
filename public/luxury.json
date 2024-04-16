@@ -2,8 +2,8 @@
     {
       "id": 1,
       "estate_title": "Oceanfront Paradise Villa",
-      "segment_name": "Luxury",
-      "description": "A breathtaking villa nestled along the pristine coastline with panoramic ocean views. This exquisite property offers unrivaled luxury and privacy.",
+      "segment_name": "Beachfront property",
+      "description": "A breathtaking villa nestled along the pristine coastline with panoramic ocean views. This exquisite property offers unrivaled luxury and privacy. Step inside to discover an open-concept living space adorned with luxurious furnishings and floor-to-ceiling windows that invite natural light to dance across the interiors. The expansive outdoor area features a stunning infinity pool overlooking the azure waters, perfect for leisurely swims or alfresco entertaining. With five spacious bedrooms, six bathrooms, and three car parking spaces, this oceanfront retreat epitomizes coastal elegance and is an ideal sanctuary for those seeking the ultimate beachfront lifestyle.",
       "price": "$25,000 per month",
       "status": "Rent",
       "area": "5000 sq ft",
@@ -17,8 +17,8 @@
     {
       "id": 2,
       "estate_title": "Luxury Penthouse in Manhattan",
-      "segment_name": "Luxury",
-      "description": "Experience the epitome of urban sophistication in this stunning penthouse boasting unparalleled views of the Manhattan skyline.",
+      "segment_name": "Penthouse",
+      "description": "Experience the epitome of urban sophistication in this stunning penthouse boasting unparalleled views of the Manhattan skyline. Spanning 3000 square feet, this luxurious residence offers a seamless blend of contemporary design and timeless elegance. The spacious living area is adorned with high-end finishes and features floor-to-ceiling windows that frame breathtaking city vistas. Enjoy the convenience of modern amenities including a sky lounge, spa, and 24/7 concierge services. With four bedrooms, three bathrooms, and two car parking spaces, this penthouse redefines luxury living in the heart of New York City.",
       "price": "$10,000,000",
       "status": "Sale",
       "area": "3000 sq ft",
@@ -32,8 +32,8 @@
     {
       "id": 3,
       "estate_title": "Private Island Retreat",
-      "segment_name": "Luxury",
-      "description": "Escape to your own private paradise on this exclusive island estate. Surrounded by crystal-clear waters and lush tropical landscapes.",
+      "segment_name": "Private island",
+      "description": "Escape to your own private paradise on this exclusive island estate. Surrounded by crystal-clear waters and lush tropical landscapes, this 10-acre retreat offers the ultimate in seclusion and luxury. The estate features a magnificent beachfront setting, complete with beachfront cabanas and a private helipad for convenient access. Enjoy endless outdoor adventures with an infinity pool overlooking the ocean and direct access to pristine beaches. With three bedrooms, four bathrooms, and no car parking spaces, this private island retreat is a rare opportunity to experience unparalleled tranquility in the heart of Fiji.",
       "price": "$50,000 per month",
       "status": "Rent",
       "area": "10 acres",
@@ -47,8 +47,8 @@
     {
       "id": 4,
       "estate_title": "Mansion in Beverly Hills",
-      "segment_name": "Luxury",
-      "description": "Live the Hollywood dream in this magnificent mansion offering opulent living spaces, lush gardens, and breathtaking city views.",
+      "segment_name": "Mansion",
+      "description": "Live the Hollywood dream in this magnificent mansion offering opulent living spaces, lush gardens, and breathtaking city views. Situated on a sprawling 8000-square-foot lot, this grand estate boasts luxurious amenities including a home theater, wine cellar, and private gym. The outdoor oasis features meticulously landscaped gardens, a sparkling pool, and ample entertainment spaces. With eight bathrooms, ten bedrooms, and six car parking spaces, this Beverly Hills mansion is an architectural masterpiece offering unparalleled luxury and sophistication.",
       "price": "$15,000,000",
       "status": "Sale",
       "area": "8000 sq ft",
@@ -62,8 +62,8 @@
     {
       "id": 5,
       "estate_title": "Ski Chalet in Aspen",
-      "segment_name": "Luxury",
-      "description": "Indulge in alpine luxury in this exquisite ski chalet nestled in the heart of Aspen. Perfect for both winter escapes and summer adventures.",
+      "segment_name": "Resort",
+      "description": "Indulge in alpine luxury in this exquisite ski chalet nestled in the heart of Aspen. Perfect for both winter escapes and summer adventures, this 4000-square-foot retreat offers unparalleled comfort and style. The chalet features ski-in/ski-out access, a relaxing sauna, and an outdoor hot tub with panoramic mountain views. With four bathrooms, five bedrooms, and two car parking spaces, this Aspen ski chalet is the ultimate destination for discerning travelers seeking an unforgettable mountain retreat.",
       "price": "$30,000 per month",
       "status": "Rent",
       "area": "4000 sq ft",
@@ -77,8 +77,8 @@
     {
       "id": 6,
       "estate_title": "Historic Estate in Tuscany",
-      "segment_name": "Luxury",
-      "description": "Step back in time and experience the charm of Tuscany in this meticulously restored historic estate surrounded by vineyards and olive groves.",
+      "segment_name": "Villa",
+      "description": "Step back in time and experience the charm of Tuscany in this meticulously restored historic estate surrounded by vineyards and olive groves. Spanning 15 acres of lush countryside, this villa offers a tranquil escape from the hustle and bustle of modern life. The property features a private vineyard, infinity pool, and tennis court, providing endless opportunities for relaxation and recreation. With six bathrooms, eight bedrooms, and four car parking spaces, this Tuscan estate is a timeless masterpiece that epitomizes the essence of la dolce vita.",
       "price": "$8,000,000",
       "status": "Sale",
       "area": "15 acres",
@@ -92,8 +92,8 @@
     {
       "id": 7,
       "estate_title": "Luxury Beachfront Residence",
-      "segment_name": "Luxury",
-      "description": "Embrace coastal living in this luxurious beachfront residence offering unparalleled ocean views and resort-style amenities.",
+      "segment_name": "Beachfront property",
+      "description": "Embrace coastal living in this luxurious beachfront residence offering unparalleled ocean views and resort-style amenities. Situated on the shores of Miami Beach, this 3500-square-foot home boasts direct beach access, an oceanfront terrace, and a state-of-the-art fitness center. The contemporary design seamlessly integrates indoor and outdoor living spaces, creating a seamless flow between the interior and exterior. With three bathrooms, four bedrooms, and two car parking spaces, this beachfront residence is the epitome of modern luxury living.",
       "price": "$20,000 per month",
       "status": "Rent",
       "area": "3500 sq ft",
@@ -107,8 +107,8 @@
     {
       "id": 8,
       "estate_title": "Exclusive Mountain Retreat",
-      "segment_name": "Luxury",
-      "description": "Discover serenity and seclusion in this exclusive mountain retreat surrounded by towering pine trees and majestic peaks.",
+      "segment_name": "Resort",
+      "description": "Discover serenity and seclusion in this exclusive mountain retreat surrounded by towering pine trees and majestic peaks. Nestled on 20 acres of pristine wilderness in Lake Tahoe, this retreat offers unparalleled privacy and tranquility. Enjoy year-round outdoor activities including hiking, fishing, and skiing, or simply relax by the cozy fireplace in the guest cabin. With five bathrooms, seven bedrooms, and three car parking spaces, this mountain retreat is a haven for nature enthusiasts and outdoor adventurers alike.",
       "price": "$12,000,000",
       "status": "Sale",
       "area": "20 acres",
@@ -122,8 +122,8 @@
     {
       "id": 9,
       "estate_title": "Luxury Villa in the South of France",
-      "segment_name": "Luxury",
-      "description": "Indulge in the timeless elegance of the French Riviera in this exquisite villa boasting panoramic sea views and lavish amenities.",
+      "segment_name": "Villa",
+      "description": "Indulge in the timeless elegance of the French Riviera in this exquisite villa boasting panoramic sea views and lavish amenities. Located on the picturesque Côte d'Azur, this 6000-square-foot villa offers unparalleled luxury and sophistication. The expansive outdoor terrace features an infinity pool, pool house, and outdoor kitchen, perfect for entertaining guests or relaxing in the Mediterranean sun. With six bathrooms, five bedrooms, and four car parking spaces, this South of France villa is a true oasis of tranquility and beauty.",
       "price": "$40,000 per month",
       "status": "Rent",
       "area": "6000 sq ft",
@@ -135,4 +135,3 @@
       "image": "https://i.ibb.co/g72BhcL/6.jpg"
     }
   ]
-  

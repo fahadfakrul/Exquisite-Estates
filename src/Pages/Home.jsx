@@ -1,4 +1,5 @@
 import Banner from "../Components/Banner";
+import EstateDetails from "../Components/EstateDetails";
 import Estates from "../Components/Estates";
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
             
             <Banner></Banner>
             <Estates></Estates>
+            
         </div>
     );
 };

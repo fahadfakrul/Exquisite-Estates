@@ -1,7 +1,8 @@
 import { FaBuilding,FaPhoneAlt,FaEnvelope,FaSkype } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="py-6 mt-10 dark:bg-gray-100 dark:text-gray-900">
+    <footer className="py-6 mt-12 dark:bg-gray-100 dark:text-gray-900">
+      <hr className="mb-10" />
       <div className="container px-6 mx-auto space-y-6  dark:divide-gray-600 md:space-y-12 divide-opacity-50">
         <div className="grid grid-cols-12">
           <div className="pb-6 col-span-full md:pb-0 md:col-span-6">
