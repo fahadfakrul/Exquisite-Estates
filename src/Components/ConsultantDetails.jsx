@@ -1,6 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
-import { FaSkype } from "react-icons/fa";
+
 const ConsultantDetails = () => {
   const persons = useLoaderData();
   const { id } = useParams();

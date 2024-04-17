@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import UseAuth from "../Hooks/UseAuth";
 
+
 const UpdateProfile = () => {
     const {updateUserProfile} = UseAuth();
     const {
@@ -26,7 +27,7 @@ const UpdateProfile = () => {
               Update Profile Now!
             </h1>
             <p className="py-6 max-w-3xl text-center">
-            Update your profile easily! Enter your name, email, and photo URL, then hit update. It's that simple!
+            Update your profile easily! Enter your name, email, and photo URL, then hit update. It is that simple!
             </p>
           </div>
           <div className="rounded-lg shrink-0 w-full max-w-lg shadow-2xl bg-[#e2d7b9]">

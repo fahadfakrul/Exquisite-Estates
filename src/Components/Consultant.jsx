@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import PropTypes from 'prop-types';
+
 const Consultant = ({person}) => {
     const {image,name,address,id} = person;
     const handleProperty = () => {
@@ -36,4 +38,7 @@ const Consultant = ({person}) => {
     );
 };
 
+Consultant.propTypes = {
+    person: PropTypes.object,
+}
 export default Consultant;

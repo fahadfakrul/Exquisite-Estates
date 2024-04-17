@@ -2,6 +2,8 @@ import { IoBedOutline } from "react-icons/io5";
 import { FaShower } from "react-icons/fa6";
 import { FaCar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
+import 'animate.css';
 const Estate = ({ estate }) => {
   
   const {
@@ -31,7 +33,7 @@ const Estate = ({ estate }) => {
         </div>
 
         <div className="flex justify-between items-center pr-6">
-        <p className="mt-4 px-8 text-[#267188]">{price}</p>
+        <p className="mt-4 px-8 text-[#267188] animate__animated animate__shakeX">{price}</p>
         <p className="mt-4 px-2 text-white bg-[#267188] rounded-2xl">{status}</p>
         </div>
         <div className="card-body  ">
@@ -74,5 +76,7 @@ const Estate = ({ estate }) => {
     </div>
   );
 };
-
+Estate.propTypes = {
+  estate: PropTypes.object,
+}
 export default Estate;
