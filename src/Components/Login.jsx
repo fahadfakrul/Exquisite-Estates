@@ -1,6 +1,30 @@
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import UseAuth from "../Hooks/UseAuth";
+import SocialLogin from "./SocialLogin";
 
 const Login = () => {
+    const {signInUser} = UseAuth()
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+      } = useForm()
+    
+      const onSubmit = (data) => {
+        const {email, password} = data;
+        signInUser(email, password)
+        .then(result => {
+            console.log(result.user);
+        })
+        .catch(error => {
+            console.error(error);
+            toast("Couldn't sign in! Please try again with correct email and password")
+          });
+    }
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -12,7 +36,7 @@ const Login = () => {
             </p>
           </div>
           <div className="rounded-lg shrink-0 w-full max-w-lg shadow-2xl bg-[#e2d7b9]">
-            <form className="card-body ">
+            <form  onSubmit={handleSubmit(onSubmit)} className="card-body ">
               <div className="form-control">
                 <label className="label">
                   <span className="text-lg font-playfair font-bold">Email</span>
@@ -21,8 +45,9 @@ const Login = () => {
                   type="email"
                   placeholder="Enter your email"
                   className="input input-bordered  bg-[#f1ead6]"
-                  required
+                  {...register("email", { required: true })}
                 />
+                {errors.email && <span className="text-red-500">This field is required</span>}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -32,23 +57,31 @@ const Login = () => {
                   type=" password"
                   placeholder="Enter your password"
                   className="input input-bordered  bg-[#f1ead6] "
-                  required
+                  {...register("password", { required: true })}
                 />
+                {errors.password && <span className="text-red-500">This field is required</span>}
                 {/* <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
                   </a>
                 </label> */}
               </div>
-              <div className="form-control mt-6">
+              <div className="form-control my-6">
                 <button className="btn text-white bg-[#418397]  border-none">Login</button>
               </div>
-              <Link to={"/register"} className="mt-5">If you are new here, <button className="underline underline-offset-1 hover:text-[#418397]">Register here!</button></Link>
+             
             </form>
-            
+           <div className="flex justify-center">
+           <SocialLogin></SocialLogin>
+           
+           </div>
+           <div className="card-body">
+           <Link to={"/register"} className="mt-5 ">If you are new here, <button className="underline underline-offset-1 hover:text-[#418397]">Register here!</button></Link>
+           </div>
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

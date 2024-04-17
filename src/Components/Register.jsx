@@ -1,12 +1,11 @@
-import { useContext } from "react";
-import { AuthContext } from "../FirebaseProvider/FirebaseProvider";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import UseAuth from "../Hooks/UseAuth";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser } = UseAuth()
 
   const {
     register,
@@ -117,7 +116,7 @@ const Register = () => {
               </div>
               <div className="form-control mt-6">
                 <button className="btn text-white bg-[#418397]  border-none">
-                  Login
+                  Register
                 </button>
               </div>
               <Link to={"/login"} className="mt-5">
