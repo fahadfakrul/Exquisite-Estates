@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import UseAuth from "../Hooks/UseAuth";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 const Register = () => {
   const { createUser } = UseAuth()
+  const navigate = useNavigate();
 
   const {
     register,
@@ -17,11 +18,12 @@ const Register = () => {
     const {email,password} = data;
     createUser(email,password)
     .then(result => {
-      toast("Success! Account created successfully.");
+      Swal.fire("Registration successful!");
+      navigate('/');
       console.log(result);
     })
     .catch((error) => {
-      toast("Error! Failed to create account. Please try again.", true);
+      Swal.fire("Registration unsuccessful!");
       console.error(error);
     });
   }
@@ -129,7 +131,7 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <ToastContainer />
+     
     </div>
   );
 };

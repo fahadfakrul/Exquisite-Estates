@@ -1,12 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import UseAuth from "../Hooks/UseAuth";
 import SocialLogin from "./SocialLogin";
+import {  useLocation } from "react-router-dom";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 const Login = () => {
-    const {signInUser} = UseAuth()
+    const {signInUser} = UseAuth();
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const {
         register,
@@ -17,13 +20,16 @@ const Login = () => {
       const onSubmit = (data) => {
         const {email, password} = data;
         signInUser(email, password)
-        .then(result => {
-            console.log(result.user);
-        })
-        .catch(error => {
-            console.error(error);
-            toast("Couldn't sign in! Please try again with correct email and password")
-          });
+            .then(result => {
+                console.log(result.user);
+
+                // navigate after login
+                navigate(location?.state ? location.state : '/');
+
+            })
+            .catch(error => {
+                console.error(error);
+            })
     }
   return (
     <div>
@@ -83,7 +89,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <ToastContainer />
+
     </div>
   );
 };

@@ -6,44 +6,62 @@ import auth from "../firebase/firebase.config";
 export const AuthContext =createContext(null)
 const FirebaseProvider = ({children}) => {
     const [user, setUser] = useState(null);
+    const [loading,setLoading] = useState(true);
+    
+
 
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
+    const facebookProvider = new FacebookAuthProvider();
    
     
     const createUser = ( email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
 
     const signInUser = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     const googleLogin = () => {
+        
+        setLoading(true);
+   
      return signInWithPopup(auth, googleProvider)
     }
     
     const githubLogin = () => {
+        setLoading(true);
         return signInWithPopup(auth, githubProvider)
+    }
+    const facebookLogin = () => {
+        setLoading(true);
+        return signInWithPopup(auth, facebookProvider)
     }
 
     
 
     const logOut = () => {
+        setLoading(true);
         setUser(null)
         signOut(auth)
     }
     
 
 
-    useEffect(() =>{
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-            setUser(user);
-            } 
-          })
-    },[])
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth, currentUser => {
+            console.log('user in the auth state changed', currentUser);
+            setUser(currentUser);
+            setLoading(false);
+        });
+        return () => {
+            unSubscribe();
+        }
+    }, [])
 
      
     const authInfo = {
@@ -51,8 +69,10 @@ const FirebaseProvider = ({children}) => {
        signInUser,
        googleLogin,
        githubLogin,
+       facebookLogin,
        logOut,
        user,
+       loading,
        
    };
     return (
