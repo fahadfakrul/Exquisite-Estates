@@ -66,17 +66,19 @@ const Login = () => {
                   </a>
                 </label> */}
               </div>
-              <div className="form-control my-6">
+              <div className="form-control mt-3">
                 <button className="btn text-white bg-[#418397]  border-none">Login</button>
               </div>
              
             </form>
+            <div className="mb-3"><p className="text-center">Or</p>
+        <p className="text-center">Login With</p></div>
            <div className="flex justify-center">
            <SocialLogin></SocialLogin>
            
            </div>
            <div className="card-body">
-           <Link to={"/register"} className="mt-5 ">If you are new here, <button className="underline underline-offset-1 hover:text-[#418397]">Register here!</button></Link>
+           <Link to={"/register"} className="mt-3 ">If you are new here, <button className="underline underline-offset-1 hover:text-[#418397]">Register here!</button></Link>
            </div>
           </div>
         </div>
