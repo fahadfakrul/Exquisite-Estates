@@ -6,7 +6,9 @@ import EstateDetails from "../Components/EstateDetails";
 import Login from "../Components/Login";
 import Register from "../Components/Register";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
-import UpdateProfile from "../Components/UpdateProfile";
+import UpdateProfile from "../Pages/UpdateProfile";
+import ConsultancyHub from "../Pages/ConsultancyHub";
+import ConsultantDetails from "../Components/ConsultantDetails";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,16 @@ const router = createBrowserRouter([
       {
         path: '/updateprofile',
         element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>,
+      },
+      {
+        path: '/consultancyhub',
+        element: <PrivateRoute><ConsultancyHub></ConsultancyHub></PrivateRoute>,
+        loader: () => fetch("/consultant.json"),
+      },
+      {
+        path: '/consultantdetails/:id',
+        element: <PrivateRoute><ConsultantDetails></ConsultantDetails></PrivateRoute>,
+        loader: () => fetch("/consultant.json"),
       },
     ],
   },

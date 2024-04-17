@@ -44,9 +44,9 @@ const Navbar = () => {
                   ? "font-semibold text-lg font-playfair  border-t-4 border-[#d2c196]  py-1 rounded-lg "
                   : " font-playfair text-lg"
               }
-              to="/about"
+              to="/consultancyhub"
             >
-              About
+              Consulatncy Hub
             </NavLink>
             <NavLink
               className={({ isActive }) =>
@@ -82,9 +82,9 @@ const Navbar = () => {
                 ? "font-semibold text-lg  font-playfair  border-t-4 border-[#d2c196] px-5 py-3 rounded-lg "
                 : "font-semibold  font-playfair text-lg"
             }
-            to="/about"
+            to="/consultancyhub"
           >
-            About
+            Consultancy Hub
           </NavLink>
           <NavLink
             className={({ isActive }) =>

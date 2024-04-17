@@ -26,8 +26,7 @@ const UpdateProfile = () => {
               Update Profile Now!
             </h1>
             <p className="py-6 max-w-3xl text-center">
-              Unlock a world of possibilities. Join us today to personalize your
-              experience. Register now and start your journey with us.
+            Update your profile easily! Enter your name, email, and photo URL, then hit update. It's that simple!
             </p>
           </div>
           <div className="rounded-lg shrink-0 w-full max-w-lg shadow-2xl bg-[#e2d7b9]">
