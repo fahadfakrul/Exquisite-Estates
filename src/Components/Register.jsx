@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { AuthContext } from "../FirebaseProvider/FirebaseProvider";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -12,7 +14,18 @@ const Register = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    const {email,password} = data;
+    createUser(email,password)
+    .then(result => {
+      toast("Success! Account created successfully.");
+      console.log(result);
+    })
+    .catch((error) => {
+      toast("Error! Failed to create account. Please try again.", true);
+      console.error(error);
+    });
+  }
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -117,6 +130,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
