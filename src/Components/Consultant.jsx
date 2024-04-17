@@ -7,7 +7,7 @@ const Consultant = ({person}) => {
       }
     return (
         <div>
-            <div className="flex space-x-6">
+            <div className="lg:flex space-x-6">
 				<img alt="" className="flex-1 flex-shrink-0 object-top h-96 mb-4 bg-center rounded-sm dark:bg-gray-500 aspect-square" src={image} />
 				<div className="flex flex-col">
 					<h4 className="text-2xl font-semibold font-playfair">{name}</h4>

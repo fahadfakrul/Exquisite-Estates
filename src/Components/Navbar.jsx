@@ -42,7 +42,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive
                   ? "font-semibold text-lg font-playfair  border-t-4 border-[#d2c196]  py-1 rounded-lg "
-                  : " font-playfair text-lg"
+                  : "font-semibold font-playfair text-lg"
               }
               to="/consultancyhub"
             >

@@ -9,7 +9,7 @@ const ConsultantDetails = () => {
   console.log(person);
   return (
     <div>
-      <div className="flex gap-10  p-6 dark:bg-gray-50 dark:text-gray-800">
+      <div className="lg:flex gap-10  p-6 dark:bg-gray-50 dark:text-gray-800">
         <img
           src={person.image}
           alt=""
