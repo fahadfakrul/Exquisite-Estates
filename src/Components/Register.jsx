@@ -1,11 +1,14 @@
-import { Link ,useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import UseAuth from "../Hooks/UseAuth";
-import Swal from 'sweetalert2/dist/sweetalert2.js'
-import 'sweetalert2/src/sweetalert2.scss'
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/src/sweetalert2.scss";
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const { createUser } = UseAuth()
+  const [showPassword, setShowPassword] = useState(false);
+  const { createUser } = UseAuth();
   const navigate = useNavigate();
 
   const {
@@ -15,18 +18,18 @@ const Register = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const {email,password} = data;
-    createUser(email,password)
-    .then(result => {
-      Swal.fire("Registration successful!");
-      navigate('/');
-      console.log(result);
-    })
-    .catch((error) => {
-      Swal.fire("Registration unsuccessful!");
-      console.error(error);
-    });
-  }
+    const { email, password } = data;
+    createUser(email, password)
+      .then((result) => {
+        Swal.fire("Registration successful!");
+        navigate("/");
+        console.log(result);
+      })
+      .catch((error) => {
+        Swal.fire("Registration unsuccessful!");
+        console.error(error);
+      });
+  };
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -54,7 +57,9 @@ const Register = () => {
                     required: "error message", // JS only: <p>error message</p> TS only support string
                   })}
                 />
-                {errors.name && <span className="text-red-500">This field is required</span>}
+                {errors.name && (
+                  <span className="text-red-500">This field is required</span>
+                )}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -68,7 +73,9 @@ const Register = () => {
                     required: "error message", // JS only: <p>error message</p> TS only support string
                   })}
                 />
-                {errors.email && <span className="text-red-500">This field is required</span>}
+                {errors.email && (
+                  <span className="text-red-500">This field is required</span>
+                )}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -89,10 +96,11 @@ const Register = () => {
                     Password
                   </span>
                 </label>
-                <input
-                  type=" password"
+               <div className="relative ">
+               <input
+                  type={showPassword ? "text" : "password"}
                   placeholder="Enter your password"
-                  className="input input-bordered  bg-[#f1ead6] "
+                  className="input w-full input-bordered  bg-[#f1ead6] "
                   {...register("password", {
                     minLength: {
                       value: 6, // Minimum length of the password
@@ -105,6 +113,10 @@ const Register = () => {
                     },
                   })}
                 />
+                <span className="absolute top-4 right-4" onClick={() => setShowPassword(!showPassword)}>
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </span>
+               </div>
                 {errors.password && (
                   <span className="text-red-500">
                     {errors.password.message}
@@ -131,7 +143,6 @@ const Register = () => {
           </div>
         </div>
       </div>
-     
     </div>
   );
 };

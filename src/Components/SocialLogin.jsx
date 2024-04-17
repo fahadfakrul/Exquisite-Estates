@@ -26,7 +26,7 @@ const SocialLogin = () => {
         // Navigate after successful login
         navigate(location?.state ? location.state : '/');
       }).catch(error => {
-        console.error("facebook login failed:", error);
+        console.error("facebook  login failed:", error);
       });
     };
   return (

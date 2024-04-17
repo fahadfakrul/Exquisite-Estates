@@ -3,14 +3,15 @@ import { useForm } from "react-hook-form";
 import UseAuth from "../Hooks/UseAuth";
 import SocialLogin from "./SocialLogin";
 import {  useLocation } from "react-router-dom";
-import Swal from 'sweetalert2/dist/sweetalert2.js'
-import 'sweetalert2/src/sweetalert2.scss'
+import 'sweetalert2/src/sweetalert2.scss';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useState } from "react";
 
 const Login = () => {
     const {signInUser} = UseAuth();
     const location = useLocation();
     const navigate = useNavigate();
-
+    const [showPassword, setShowPassword] = useState(false);
     const {
         register,
         handleSubmit,
@@ -59,12 +60,17 @@ const Login = () => {
                 <label className="label">
                   <span className="text-lg font-playfair font-bold">Password</span>
                 </label>
+                <div className="relative">
                 <input
-                  type=" password"
+                  type={showPassword ? "text" : "password"}
                   placeholder="Enter your password"
-                  className="input input-bordered  bg-[#f1ead6] "
+                  className="input input-bordered w-full bg-[#f1ead6] "
                   {...register("password", { required: true })}
                 />
+                <span className="absolute top-4 right-4" onClick={() => setShowPassword(!showPassword)}>
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </span>
+                </div>
                 {errors.password && <span className="text-red-500">This field is required</span>}
                 {/* <label className="label">
                   <a href="#" className="label-text-alt link link-hover">

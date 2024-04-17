@@ -3,6 +3,7 @@ import { FaShower } from "react-icons/fa6";
 import { FaCar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Estate = ({ estate }) => {
+  
   const {
     image,
     facilities,
@@ -15,6 +16,10 @@ const Estate = ({ estate }) => {
     bedroom,
     carparkings,
   } = estate;
+
+  const handleProperty = () => {
+    window.scrollTo(0, 0);
+  }
   return (
     <div>
       <div className="card lg:w-96 bg-base-100 shadow-xl border border-[#13131326] transition  hover:scale-105 border-opacity-30">
@@ -58,6 +63,7 @@ const Estate = ({ estate }) => {
               <Link
                 to={`/estate/${estate.id}`}
                 className="btn bg-[#267188] text-white"
+                onClick={handleProperty}
               >
                 View Property
               </Link>
