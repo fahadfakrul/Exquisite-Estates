@@ -31,7 +31,7 @@ const EstateDetails = () => {
                 <p>{estate.location}</p>
               </div>
             </div>
-            <div className="flex gap-14 ">
+            <div className="flex gap-10 ">
               <div className="flex flex-col w-max items-center">
                 <GiMaze size={32} />
                 <p>{estate.area}</p>

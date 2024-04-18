@@ -36,16 +36,17 @@ const Login = () => {
     }
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="  lg:p-0 min-h-screen ">
         <div className="hero-content flex-col ">
-          <div className="text-center lg:text-left">
+          <div className=" text-center lg:text-left">
             <h1 className="text-5xl font-bold text-center font-playfair">Login now!</h1>
             <p className="py-6 max-w-3xl text-center">
             Securely access personalized services. Your gateway to tailored experiences awaits. Login now for exclusive benefits.
             </p>
           </div>
-          <div className="rounded-lg shrink-0 w-full max-w-lg shadow-2xl bg-[#e2d7b9]">
-            <form  onSubmit={handleSubmit(onSubmit)} className="card-body ">
+          <div className="  rounded-lg shrink-0 p-4 lg:w-full max-w-lg  lg:shadow-2xl bg-[#e2d7b9]">
+            <form  onSubmit={handleSubmit(onSubmit)} className="
+             ">
               <div className="form-control">
                 <label className="label">
                   <span className="text-lg font-playfair font-bold">Email</span>

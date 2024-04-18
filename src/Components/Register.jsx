@@ -32,7 +32,7 @@ const Register = () => {
   };
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="lg:p-0 min-h-screen">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold text-center font-playfair">
@@ -43,8 +43,8 @@ const Register = () => {
               experience. Register now and start your journey with us.
             </p>
           </div>
-          <div className="rounded-lg shrink-0 w-full max-w-lg shadow-2xl bg-[#e2d7b9]">
-            <form onSubmit={handleSubmit(onSubmit)} className="card-body ">
+          <div className="rounded-lg shrink-0 p-4 lg:w-full max-w-lg  lg:shadow-2xl bg-[#e2d7b9]">
+            <form onSubmit={handleSubmit(onSubmit)} className=" ">
               <div className="form-control">
                 <label className="label">
                   <span className="text-lg font-playfair font-bold">Name</span>
@@ -128,12 +128,12 @@ const Register = () => {
                   </a>
                 </label> */}
               </div>
-              <div className="form-control mt-6">
+              <div className="form-control my-6">
                 <button className="btn text-white bg-[#418397]  border-none">
                   Register
                 </button>
               </div>
-              <Link to={"/login"} className="mt-5">
+              <Link to={"/login"} className="">
                 Already have an account,{" "}
                 <button className="underline underline-offset-1 hover:text-[#418397]">
                   Login here!
