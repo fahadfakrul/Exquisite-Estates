@@ -3,7 +3,8 @@ import { useForm } from "react-hook-form";
 import UseAuth from "../Hooks/UseAuth";
 import SocialLogin from "./SocialLogin";
 import {  useLocation } from "react-router-dom";
-import 'sweetalert2/src/sweetalert2.scss';
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/src/sweetalert2.scss";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 
@@ -25,12 +26,13 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user);
-
+                Swal.fire("Login successful!");
                 // navigate after login
                 navigate(location?.state ? location.state : '/');
 
             })
             .catch(error => {
+              Swal.fire("Login unsuccessful! Please try again.");
                 console.error(error);
             })
     }
@@ -44,8 +46,8 @@ const Login = () => {
             Securely access personalized services. Your gateway to tailored experiences awaits. Login now for exclusive benefits.
             </p>
           </div>
-          <div className="  rounded-lg shrink-0 p-4 lg:w-full max-w-lg  lg:shadow-2xl bg-[#e2d7b9]">
-            <form  onSubmit={handleSubmit(onSubmit)} className="
+          <div className="  rounded-lg shrink-0 p-4 md:w-full max-w-lg  lg:shadow-2xl bg-[#e2d7b9]">
+            <form  onSubmit={handleSubmit(onSubmit)} className="card-body
              ">
               <div className="form-control">
                 <label className="label">

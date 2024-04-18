@@ -43,8 +43,8 @@ const Register = () => {
               experience. Register now and start your journey with us.
             </p>
           </div>
-          <div className="rounded-lg shrink-0 p-4 lg:w-full max-w-lg  lg:shadow-2xl bg-[#e2d7b9]">
-            <form onSubmit={handleSubmit(onSubmit)} className=" ">
+          <div className="rounded-lg shrink-0 p-4 md:w-full  max-w-lg  lg:shadow-2xl bg-[#e2d7b9]">
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="text-lg font-playfair font-bold">Name</span>
@@ -104,7 +104,7 @@ const Register = () => {
                   {...register("password", {
                     minLength: {
                       value: 6, // Minimum length of the password
-                      message: "Password must be at least 8 characters long",
+                      message: "Password must be at least 6 characters long",
                     },
                     pattern: {
                       value: /^(?=.*[A-Z])(?=.*[a-z]).+$/,

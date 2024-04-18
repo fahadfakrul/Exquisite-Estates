@@ -27,8 +27,8 @@ const UpdateProfile = () => {
               then hit update. It is that simple!
             </p>
           </div>
-          <div className="rounded-lg shrink-0 p-4 lg:w-full max-w-lg  lg:shadow-2xl bg-[#e2d7b9]">
-            <form onSubmit={handleSubmit(onSubmit)} className=" ">
+          <div className="rounded-lg shrink-0 p-4 md:w-full max-w-lg  lg:shadow-2xl bg-[#e2d7b9]">
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body ">
               <div className="form-control">
                 <label className="label">
                   <span className="text-lg font-playfair font-bold">Name</span>
